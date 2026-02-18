@@ -78,8 +78,8 @@ class CNNClassifier(nn.Module):
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = CNNClassifier().to(device)
 
-print('Name: Kiruthiga.B')
-print('Register Number: 212224040160')
+print('Name: Subassh.M')
+print('Register Number: 212224220109')
 summary(model, input_size=(1, 28, 28))
 
 criterion = nn.CrossEntropyLoss()
@@ -100,8 +100,8 @@ def train_model(model, train_loader, num_epochs=3):
 
             running_loss += loss.item()
 
-        print('Name: Kiruthiga.B')
-        print('Register Number: 212224040160')
+        print('Name: Subash.M')
+        print('Register Number: 212224220109')
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {running_loss/len(train_loader):.4f}')
 
 train_model(model, train_loader)
@@ -126,8 +126,8 @@ def test_model(model, test_loader):
             all_labels.extend(labels.cpu().numpy())
 
     accuracy = correct / total
-    print('Name: Kiruthiga.B')
-    print('Register Number: 212224040160')
+    print('Name: Subash.M')
+    print('Register Number: 212224220109')
     print(f'Test Accuracy: {accuracy:.4f}')
 
     cm = confusion_matrix(all_labels, all_preds)
@@ -140,8 +140,8 @@ def test_model(model, test_loader):
     plt.title('Confusion Matrix')
     plt.show()
 
-    print('Name: Kiruthiga.B')
-    print('Register Number: 212224040160')
+    print('Name: Subash.M')
+    print('Register Number: 212224220109')
     print("Classification Report:")
     print(classification_report(all_labels, all_preds, target_names=test_dataset.classes))
 
@@ -157,8 +157,8 @@ def predict_image(model, image_index, dataset):
         _, predicted = torch.max(output, 1)
 
     class_names = dataset.classes
-    print('Name: Kiruthiga.B')
-    print('Register Number: 212224040160')
+    print('Name: Subash.M')
+    print('Register Number: 212224220109')
     plt.imshow(image.squeeze(), cmap="gray")
     plt.title(f'Actual: {class_names[label]}\nPredicted: {class_names[predicted.item()]}')
     plt.axis("off")
@@ -170,22 +170,22 @@ predict_image(model, image_index=80, dataset=test_dataset)
 ```
 ## OUTPUT
 ### Training Loss per Epoch
-<img width="1042" height="579" alt="image" src="https://github.com/user-attachments/assets/44d18fd5-9496-43e2-84b0-dc76595b92be" />
+<img width="829" height="559" alt="Screenshot 2026-02-18 102631" src="https://github.com/user-attachments/assets/f4956cfd-57ff-425e-b4f7-a49a8cf0c410" />
 
 
 ## Include the Training Loss per epoch
-<img width="754" height="329" alt="image" src="https://github.com/user-attachments/assets/1f136ce0-3ecf-4db5-a66f-51cb5399e9b6" />
+<img width="737" height="288" alt="Screenshot 2026-02-18 102906" src="https://github.com/user-attachments/assets/5873862c-e273-41c7-a5a4-898a491fbf69" />
 
 ### Confusion Matrix
-<img width="911" height="759" alt="image" src="https://github.com/user-attachments/assets/4579f09e-6520-472e-b376-7990d6457b8e" />
+<img width="814" height="677" alt="Screenshot 2026-02-18 103032" src="https://github.com/user-attachments/assets/6424602a-40f9-4ebf-95b4-073039a6e1f3" />
 
 
 ### Classification Report
-<img width="746" height="384" alt="image" src="https://github.com/user-attachments/assets/71d8fab9-4e1e-42a6-ab5f-640a65c4e809" />
+<img width="935" height="438" alt="Screenshot 2026-02-18 103103" src="https://github.com/user-attachments/assets/56ad88d2-40ea-4041-9038-259ce8fba116" />
 
 
 ### New Sample Data Prediction
-<img width="759" height="627" alt="image" src="https://github.com/user-attachments/assets/cb6a4682-b9b7-420e-9c03-81f9fd37d921" />
+<img width="935" height="438" alt="Screenshot 2026-02-18 103103" src="https://github.com/user-attachments/assets/be2c1425-c3fd-4d3d-a45a-a88fd282ee47" />
 
 ## RESULT :
 Thus, a convolutional deep neural network for image classification and to verify the response for new images is to developed successfully.
